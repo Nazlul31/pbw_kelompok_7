@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard User</title>
+    <link rel="stylesheet" href="CSS/user_dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar (Navbar) -->
+        <div class="sidebar">
+            <h2>Menu</h2>
+            <ul class="navbar">
+                <li><a href="#" id="profilLink">Profil</a></li>
+                <li><a href="statuspinjaman.html" id="statusLink">Status Peminjaman</a></li>
+                <li><a href="#" id="logoutButton">Logout</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="header">
+                <h1>Sistem Peminjaman Buku</h1>
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Cari judul buku...">
+                    <button id="searchButton">Cari</button>
+                </div>
+            </div>
+
+            <div class="book-list">
+                <!-- Buku 1 -->
+                <div class="book-card">
+                    <img src="Gambar/hujan.jpg" alt="Hujan">
+                    <h3>Hujan</h3>
+                    <p>Penulis: Tere Liye</p>
+                    <div class="date-input">
+                        <label for="returnDate1">Tanggal Kembali:</label>
+                        <input type="date" id="returnDate1" required>
+                    </div>
+                    <button class="pinjamButton" data-book="Hujan">Pinjam</button>
+                </div>
+
+                <!-- Buku 2 -->
+                <div class="book-card">
+                    <img src="Gambar/pulang.jpg" alt="Pulang">
+                    <h3>Pulang</h3>
+                    <p>Penulis: Tere Liye</p>
+                    <div class="date-input">
+                        <label for="returnDate2">Tanggal Kembali:</label>
+                        <input type="date" id="returnDate2" required>
+                    </div>
+                    <button class="pinjamButton" data-book="Pulang">Pinjam</button>
+                </div>
+
+                <!-- Buku 3 -->
+                <div class="book-card">
+                    <img src="Gambar/pergi.jpg" alt="Pergi">
+                    <h3>Pergi</h3>
+                    <p>Penulis: Tere Liye</p>
+                    <div class="date-input">
+                        <label for="returnDate3">Tanggal Kembali:</label>
+                        <input type="date" id="returnDate3" required>
+                    </div>
+                    <button class="pinjamButton" data-book="Pergi">Pinjam</button>
+                </div>
+
+                <!-- Buku 4 -->
+                <div class="book-card">
+                    <img src="Gambar/rindu.jpg" alt="Rindu">
+                    <h3>Rindu</h3>
+                    <p>Penulis: Tere Liye</p>
+                    <div class="date-input">
+                        <label for="returnDate4">Tanggal Kembali:</label>
+                        <input type="date" id="returnDate4" required>
+                    </div>
+                    <button class="pinjamButton" data-book="Rindu">Pinjam</button>
+                </div>
+
+                <!-- Buku 5 -->
+                <div class="book-card">
+                    <img src="Gambar/negeri.jpg" alt="Negeri Para Bedebah">
+                    <h3>Negeri Para Bedebah</h3>
+                    <p>Penulis: Tere Liye</p>
+                    <div class="date-input">
+                        <label for="returnDate5">Tanggal Kembali:</label>
+                        <input type="date" id="returnDate5" required>
+                    </div>
+                    <button class="pinjamButton" data-book="Negeri Para Bedebah">Pinjam</button>
+                </div>
+
+                <!-- Buku 6 -->
+                <div class="book-card">
+                    <img src="Gambar/bumi.jpg" alt="Bumi">
+                    <h3>Bumi</h3>
+                    <p>Penulis: Tere Liye</p>
+                    <div class="date-input">
+                        <label for="returnDate6">Tanggal Kembali:</label>
+                        <input type="date" id="returnDate6" required>
+                    </div>
+                    <button class="pinjamButton" data-book="Bumi">Pinjam</button>
+                </div>
+
+                <!-- Buku 7 -->
+                <div class="book-card">
+                    <img src="Gambar/bulan.jpg" alt="Bulan">
+                    <h3>Bulan</h3>
+                    <p>Penulis: Tere Liye</p>
+                    <div class="date-input">
+                        <label for="returnDate7">Tanggal Kembali:</label>
+                        <input type="date" id="returnDate7" required>
+                    </div>
+                    <button class="pinjamButton" data-book="Bulan">Pinjam</button>
+                </div>
+
+                <!-- Buku 8 -->
+                <div class="book-card">
+                    <img src="Gambar/matahari.jpg" alt="Matahari">
+                    <h3>Matahari</h3>
+                    <p>Penulis: Tere Liye</p>
+                    <div class="date-input">
+                        <label for="returnDate8">Tanggal Kembali:</label>
+                        <input type="date" id="returnDate8" required>
+                    </div>
+                    <button class="pinjamButton" data-book="Matahari">Pinjam</button>
+                </div>
+
+                <!-- Buku 9 -->
+                <div class="book-card">
+                    <img src="Gambar/bintang.jpg" alt="Bintang">
+                    <h3>Bintang</h3>
+                    <p>Penulis: Tere Liye</p>
+                    <div class="date-input">
+                        <label for="returnDate9">Tanggal Kembali:</label>
+                        <input type="date" id="returnDate9" required>
+                    </div>
+                    <button class="pinjamButton" data-book="Bintang">Pinjam</button>
+                </div>
+
+                <!-- Buku 10 -->
+                <div class="book-card">
+                    <img src="Gambar/ceros.jpg" alt="Ceros dan Batozar">
+                    <h3>Ceros dan Batozar</h3>
+                    <p>Penulis: Tere Liye</p>
+                    <div class="date-input">
+                        <label for="returnDate10">Tanggal Kembali:</label>
+                        <input type="date" id="returnDate10" required>
+                    </div>
+                    <button class="pinjamButton" data-book="Ceros dan Batozar">Pinjam</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2025 Sistem Peminjaman Buku Online</p>
+    </div>
+
+    <!-- Menghubungkan file JavaScript -->
+    <script src="JS/user_dashboard.js"></script>
+</body>
+</html>

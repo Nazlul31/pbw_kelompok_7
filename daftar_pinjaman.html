@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Pinjaman</title>
+    <link rel="stylesheet" href="CSS/daftar_pinjaman.css">
+    <script src="JS/admin_dashboard.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <ul>
+            <li><a href="dashboard_admin.html">Dashboard</a></li>
+            <li><a href="data_pengguna.html">Data Pengguna</a></li>
+            <li><a href="daftar_pinjaman.html">Daftar Peminjaman</a></li>
+            <li><a href="#" onclick="logout()">Logout</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h1>Daftar Pinjaman</h1>
+        <button class="add">+ Tambah Peminjaman</button>
+        <table id="loanTable">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama Peminjam</th>
+                    <th>Buku</th>
+                    <th>Tanggal Pinjam</th>
+                    <th>Tanggal Kembali</th>
+                    <th>Status</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Ahmad</td>
+                    <td>Matematika Dasar</td>
+                    <td>2025-03-20</td>
+                    <td>2025-04-20</td>
+                    <td>Dipinjam</td>
+                    <td><button class="delete-btn" onclick="hapusPeminjaman(this)">Hapus</button></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Siti</td>
+                    <td>Sejarah Dunia</td>
+                    <td>2025-03-15</td>
+                    <td>2025-04-15</td>
+                    <td>Dikembalikan</td>
+                    <td><button class="delete-btn" onclick="hapusPeminjaman(this)">Hapus</button></td>
+                </tr>
+            </tbody>
+        </table>        
+    </div>
+</body>
+</html>

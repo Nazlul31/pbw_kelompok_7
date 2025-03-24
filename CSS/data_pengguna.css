@@ -1,0 +1,106 @@
+/* Reset dan Font Umum */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #FBF3CF;
+    display: flex;
+    min-height: 100vh; /* Pastikan body mengambil tinggi penuh viewport */
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: calc(100vh - 40px); /* Menyesuaikan tinggi sidebar */
+    margin: 20px; /* Memberikan jarak luar pada sidebar */
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #FCEFB4; /* Warna hover */
+}
+
+/* Konten Utama */
+.content {
+    flex-grow: 1; /* Mengisi sisa ruang di body */
+    margin: 20px; /* Memberikan jarak luar pada konten utama */
+}
+
+h1 {
+    background-color: #FCEFB4;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Tombol Tambah Data */
+button.add {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px; /* Memberikan jarak atas tombol */
+}
+
+button.add:hover {
+    background-color: #218838; /* Warna hover untuk tombol tambah data */
+}
+
+/* Tabel */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; /* Memberikan jarak atas tabel */
+    background-color: white;
+}
+
+th, td {
+    border: 1px solid #ddd; /* Warna border lebih lembut */
+    padding: 10px;
+}
+
+th {
+    background-color: #FCEFB4; /* Warna header tabel */
+}
+
+td img.avatar {
+    width: 40px;
+    height: auto; /* Menjaga proporsi gambar avatar */
+}
+
+/* Tombol Hapus */
+button.delete-btn {
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+}

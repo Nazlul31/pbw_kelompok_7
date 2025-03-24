@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iperpus - Sistem Peminjaman Buku Online</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <script src="JS/script.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <span class="logo-icon">📚</span>
+            <span>Iperpus</span>
+        </div>
+        
+        <div class="nav-links">
+            <a href="#beranda">Beranda</a>
+            <a href="#koleksi">Koleksi Buku</a>
+            <a href="#layanan">Layanan</a>
+            <a href="#kontak">Kontak</a>
+        </div>
+        
+        <div class="auth-buttons">
+            <a href="halaman_login.html" class="btn btn-outline">Masuk</a>
+            <a href="register.html" class="btn btn-primary">Daftar</a>
+        </div>        
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="beranda">
+        <div>
+            <h1>Temukan Dunia Pengetahuan</h1>
+            <p>Akses ribuan buku dari berbagai kategori. Pinjam, baca, dan kembalikan dengan mudah melalui platform BukuPintar.</p>
+        </div>
+        
+        <div class="search-container">
+            <input type="text" placeholder="Cari judul buku, penulis, atau kategori...">
+            <button class="search-btn">Cari</button>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section class="features" id="layanan">
+        <h2>Layanan Kami</h2>
+        
+        <div class="features-container">
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Peminjaman Online</h3>
+                <p>Pinjam buku favorit Anda kapan saja dan di mana saja melalui aplikasi web kami tanpa perlu mengunjungi perpustakaan.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">⏱️</div>
+                <h3>Pengembalian Fleksibel</h3>
+                <p>Nikmati masa peminjaman yang fleksibel dengan opsi perpanjangan online dan notifikasi jatuh tempo.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Pelacakan Aktivitas</h3>
+                <p>Pantau riwayat peminjaman, buku yang sedang dipinjam, dan rekomendasi berdasarkan preferensi membaca Anda.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Popular Books Section -->
+    <section class="popular-books" id="koleksi">
+        <h2>Buku Populer</h2>
+        
+        <div class="books-container">
+            <div class="book-card">
+                <div class="book-cover">
+                    <img src="Images/Atomic Habits.jpg" alt="Book Cover" class="book-img">
+                </div>
+                <div class="book-details">
+                    <h3 class="book-title">Atomic Habits</h3>
+                    <p class="book-author">James Clear</p>
+                    <span class="book-status available">Tersedia</span>
+                </div>
+            </div>
+            
+            <div class="book-card">
+                <div class="book-cover">
+                    <img src="Images/Bulan.jpg" alt="Book Cover" class="book-img">
+                </div>
+                <div class="book-details">
+                    <h3 class="book-title">Bulan</h3>
+                    <p class="book-author">Tere Liye</p>
+                    <span class="book-status borrowed">Dipinjam</span>
+                </div>
+            </div>
+            
+            <div class="book-card">
+                <div class="book-cover">
+                    <img src="Images/Filosofi Teras.jpg" alt="Book Cover" class="book-img">
+                </div>
+                <div class="book-details">
+                    <h3 class="book-title">Filosofi Teras</h3>
+                    <p class="book-author">Henry Manampiring</p>
+                    <span class="book-status available">Tersedia</span>
+                </div>
+            </div>
+            
+            <div class="book-card">
+                <div class="book-cover">
+                    <img src="Images/Start With Why.jpg" alt="Book Cover" class="book-img">
+                </div>
+                <div class="book-details">
+                    <h3 class="book-title">Star With Why</h3>
+                    <p class="book-author">Simon Sinek</p>
+                    <span class="book-status available">Tersedia</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+     <!-- CTA Section -->
+    <section class="cta">
+        <h2>Mulai Petualangan Membaca Anda</h2>
+        <p>Daftar sekarang dan dapatkan akses ke ribuan koleksi buku dari berbagai kategori. Gratis selama 30 hari!</p>
+        <a href="register.html" class="btn btn-primary">Daftar Sekarang</a>
+    </section>
+
+    
+    <!-- Footer -->
+    <footer id="kontak">
+        <div class="footer-top">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <span>📚</span>
+                    <span>Iperpus</span>
+                </div>
+                <p>Iperpus adalah platform peminjaman buku digital yang memudahkan Anda mengakses berbagai koleksi buku dari mana saja dan kapan saja.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Tautan Cepat</h3>
+                <ul>
+                    <li><a href="#beranda">Beranda</a></li>
+                    <li><a href="#koleksi">Koleksi Buku</a></li>
+                    <li><a href="#layanan">Layanan</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                    <li><a href="#">Syarat & Ketentuan</a></li>
+                    <li><a href="#">Kebijakan Privasi</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h3>Hubungi Kami</h3>
+                <p>📍 Jl. Perpustakaan No. 123, Banda Aceh</p>
+                <p>📞 +62 852 1903 3903</p>
+                <p>✉️ info@iperpus.id</p>
+            </div>
+        </div>
+        
+        <div class="dev-team">
+            <h3>Tim Pengembang</h3>
+            <div class="dev-profiles">
+                <div class="dev-profile">
+                    <div class="dev-pic">
+                        <img src="Profile IMG/Nazlul.png" alt="Muhammad Nazlul">
+                    </div>
+                    <h4 class="dev-name">Muhammad Nazlul</h4>
+                    <p class="dev-role">Front-End Developer</p>
+                    <div class="dev-tasks">
+                        <h4>Tugas:</h4>
+                        <ul>
+                            <li>Sistem Halaman Admin</li>
+                            <li>Integrasi Halaman Web</li>
+                            <li>Pembuatan Landing Page</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="dev-profile">
+                    <div class="dev-pic">
+                        <img src="Profile IMG/Caesar.jpg" alt="Muhammad Caesar">
+                    </div>
+                    <h4 class="dev-name">Muhammad Caesar</h4>
+                    <p class="dev-role">Front-End Developer</p>
+                    <div class="dev-tasks">
+                        <h4>Tugas:</h4>
+                        <ul>
+                            <li>Sistem registrasi dan login</li>
+                            <li>Integrasi Halaman Web</li>
+                            <li>Fitur autentikasi pengguna</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="dev-profile">
+                    <div class="dev-pic">
+                        <img src="Profile IMG/Davina.jpg" alt="Davina Aura">
+                    </div>
+                    <h4 class="dev-name">Davina Aura</h4>
+                    <p class="dev-role">Front-End Developer</p>
+                    <div class="dev-tasks">
+                        <h4>Tugas:</h4>
+                        <ul>
+                            <li>Sistem Halaman User</li>
+                            <li>Sistem Peminjaman Buku</li>
+                            <li>Pengeloaan Data Buku dan Pengguna</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="dev-profile">
+                    <div class="dev-pic">
+                        <img src="Profile IMG/Arifa.jpg" alt="Arifa Muthmainnah">
+                    </div>
+                    <h4 class="dev-name">Arifa Muthmainnah</h4>
+                    <p class="dev-role">Front-End Developer</p>
+                    <div class="dev-tasks">
+                        <h4>Tugas:</h4>
+                        <ul>
+                            <li>User Profile Management</li>
+                            <li>Desain Halaman Tambah User</li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2025 Iperpus. Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+</body>
+</html>

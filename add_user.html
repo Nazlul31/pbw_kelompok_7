@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah User</title>
+    <link rel="stylesheet" href="CSS/add_user.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Tambah Pengguna Baru</h2>
+        <form id="addUserForm">
+            <div class="input-group">
+                <label for="newUsername">Username:</label>
+                <input type="text" id="newUsername">
+                <span id="username-error" class="error"></span>
+            </div>
+        
+            <div class="input-group">
+                <label for="newEmail">Email:</label>
+                <input type="text" id="newEmail" name="email">
+                <span id="email-error" class="error"></span>
+            </div>
+        
+            <div class="input-group ropdown-container">
+                <label for="newRole">Peran:</label>
+                <select id="newRole" name="role">
+                    <option value="Administrator">Admin</option>
+                    <option value="User Biasa">User</option>
+                </select>
+            </div>
+            
+            <button type="submit">Tambah User</button>
+
+        </form>        
+    </div>
+
+    <script src="JS/add_user.js"></script>
+</body>
+</html>

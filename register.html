@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="CSS/register.css">
+    <script src="JS/register.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Bagian Form Register -->
+        <div class="form-container">
+            <h2>Register</h2>
+            <p>Tolong isi data di bawah.</p>
+            <form id="registerForm">
+                <input type="text" id="namaLengkap" placeholder="Nama Lengkap" required>
+                <input type="email" id="email" placeholder="Email Address" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                
+                <!-- Pilihan Peran (User / Admin) -->
+                <div class="role-toggle">
+                    <input type="radio" id="user" name="role" value="user" checked>
+                    <label for="user" class="role-option">User</label>
+
+                    <input type="radio" id="admin" name="role" value="admin">
+                    <label for="admin" class="role-option">Admin</label>
+                </div>
+                
+                <button type="submit">Register</button>
+            </form>
+            <p>Sudah punya akun? <a href="halaman_login.html">Login</a></p>
+        </div>
+
+        <!-- Bagian Gambar dan Selamat Datang -->
+        <div class="image-container">
+            <img src="Gambar/900356e7d4b2e96f22eb94afcd014e76.jpg" alt="Background Image">
+            <h2>Selamat Meminjam Buku</h2>
+        </div>
+
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="checkmark">✔</span>
+                <p>Register Berhasil</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

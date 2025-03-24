@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubah Profil</title>
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="profile-header">
+            <!-- Gambar Profil -->
+            <img id="preview" src="gambar/profile.jpg" alt="Foto Profil" onclick="document.getElementById('profile-picture').click()">
+            <input type="file" id="profile-picture" accept="image/*" onchange="ubahGambar(event)">
+            <button id="hapus-gambar" onclick="hapusGambar()">Hapus Foto</button>
+            <h2>Ubah Profil</h2>
+        </div>
+        
+        <div class="profile-info">
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Masukkan Username">
+            <span id="username-error" class="error"></span>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Masukkan Email">
+            <span id="email-error" class="error"></span>
+
+            <label for="password">Password Baru:</label>
+            <input type="password" id="password" placeholder="Masukkan Password">
+            <span id="password-error" class="error"></span>
+
+            <button onclick="simpanPerubahan()">Simpan Perubahan</button>
+        </div>
+        <div id="profile-display" class="hidden">
+            <h3>Profil Tersimpan</h3>
+            <img id="saved-profile-picture" src="gambar/profile.jpg" alt="Foto Profil Tersimpan" style="width: 100px; height: 100px; border-radius: 50%; display: block; margin: 10px auto;">
+            <p><strong>Username:</strong> <span id="saved-username"></span></p>
+            <p><strong>Email:</strong> <span id="saved-email"></span></p>
+        </div>
+    </div>
+    <script src="js/profile.js"></script>
+</body>
+</html>

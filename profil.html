@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil User</title>
+    <link rel="stylesheet" href="CSS/user_dashboard.css"> <!-- Gunakan CSS yang sama dengan dashboard -->
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar (Navbar) -->
+        <div class="sidebar">
+            <h2>Menu</h2>
+            <ul class="navbar">
+                <li><a href="user_dashboard.html" id="profilLink">Pinjam</a></li>
+                <li><a href="statuspinjaman.html" id="statusLink">Status Peminjaman</a></li>
+                <li><a href="profile.html" id="statusLink">Ubah profile</a></li>
+                <li><a href="add_user.html" id="statusLink">Tambah profile</a></li>
+                <li><a href="#" id="logoutButton">Logout</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="header">
+                <h1>Profil User</h1>
+            </div>
+
+            <div class="profil-container">
+                <!-- Gambar Avatar Kosong -->
+                <div class="avatar">
+                    <img src="Gambar/profil (2).png" alt="Avatar">
+                </div>
+
+                <!-- Informasi Profil -->
+                <div class="profil-info">
+                    <div class="info-item">
+                        <label for="nama">Nama:</label>
+                        <p id="nama">Irma Alisa Nabila</p>
+                    </div>
+                    <div class="info-item">
+                        <label for="email">Email:</label>
+                        <p id="email">irma@emailcontoh.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2025 Sistem Peminjaman Buku Online</p>
+    </div>
+
+    <!-- Menghubungkan file JavaScript -->
+    <script src="JS/profil.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin</title>
+    <link rel="stylesheet" href="CSS/dashboard_admin.css">
+    <script src="JS/admin_dashboard.js" defer></script>
+</head> 
+<body>
+    <div class="sidebar">
+        <ul>
+            <li><a href="dashboard_admin.html">Dashboard</a></li>
+            <li><a href="data_pengguna.html">Data Pengguna</a></li>
+            <li><a href="daftar_pinjaman.html">Daftar Pinjaman</a></li>
+            <li><a href="halaman_login.html">Logout</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h1>Dashboard Admin</h1>
+
+        <!-- Ringkasan Data -->
+        <div class="summary">
+            <div class="card">
+                <h3>Total Pengguna</h3>
+                <p id="totalPengguna">0</p>
+            </div>
+            <div class="card">
+                <h3>Total Buku</h3>
+                <p id="totalBuku">0</p>
+            </div>
+            <div class="card">
+                <h3>Buku Dipinjam</h3>
+                <p id="bukuDipinjam">0</p>
+            </div>
+            <div class="card">
+                <h3>Peminjaman Terlambat</h3>
+                <p id="terlambat">0</p>
+            </div>
+        </div>
+
+        <!-- Grafik Peminjaman (Sederhana) -->
+        <canvas id="chartPeminjaman"></canvas>
+
+        <!-- Aktivitas Terbaru -->
+        <h2>Aktivitas Terbaru</h2>
+        <ul class="recent-activities" id="recentActivities">
+            <li>Loading...</li>
+        </ul>
+    </div>
+</body>
+</html>

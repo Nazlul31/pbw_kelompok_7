@@ -1,0 +1,196 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #FBF3CF;
+}
+
+/* Container utama */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 900px;
+    height: 500px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Kotak login */
+.login-box {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-box h2 {
+    margin-bottom: 10px;
+}
+
+/* Input styling */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border 0.3s;
+}
+
+.login-box input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Toggle role (User/Admin) */
+.role-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.role-toggle p {
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.role-toggle input {
+    display: none;
+}
+
+.role-toggle label {
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #d3d3d3;
+    transition: background 0.3s, color 0.3s;
+}
+
+input#user:checked + label[for="user"],
+input#admin:checked + label[for="admin"] {
+    background: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+/* Keep me logged in & forgot password */
+.options {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.options a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.options a:hover {
+    text-decoration: underline;
+}
+
+/* Tombol Login */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Kotak selamat datang */
+.welcome-box {
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.right {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.right h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+/* Efek jika input salah */
+.input-group .error {
+    border: 2px solid red;
+    background-color: #ffe6e6; /* Warna latar merah muda */
+}
+
+/* Pesan error */
+.error-text {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .login-box, .welcome-box {
+        width: 100%;
+    }
+
+    .right h2 {
+        font-size: 18px;
+        padding: 8px 15px;
+    }
+}
