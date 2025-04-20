@@ -1,34 +1,18 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Simulasi data
-    let data = {
-        totalPengguna: 125,
-        totalBuku: 560,
-        bukuDipinjam: 87,
-        terlambat: 15,
-        aktivitasTerbaru: [
+document.addEventListener("DOMContentLoaded", function () {
+    // Cek Local Storage, kalau belum ada, buat data awal
+    if (!localStorage.getItem("aktivitasTerbaru")) {
+        let dataAwal = [
             "User A meminjam buku 'Belajar JavaScript'",
             "User B mengembalikan buku 'Pemrograman Python'",
             "User C mendaftar sebagai pengguna baru"
-        ],
-        peminjamanBulan: [10, 20, 15, 30, 25, 40, 35, 50]
-    };
+        ];
+        localStorage.setItem("aktivitasTerbaru", JSON.stringify(dataAwal));
+    }
 
-    // Update ringkasan
-    document.getElementById("totalPengguna").textContent = data.totalPengguna;
-    document.getElementById("totalBuku").textContent = data.totalBuku;
-    document.getElementById("bukuDipinjam").textContent = data.bukuDipinjam;
-    document.getElementById("terlambat").textContent = data.terlambat;
+    // Tampilkan aktivitas
+    tampilkanAktivitas();
 
-    // Update aktivitas terbaru
-    let activityList = document.getElementById("recentActivities");
-    activityList.innerHTML = "";
-    data.aktivitasTerbaru.forEach(item => {
-        let li = document.createElement("li");
-        li.textContent = item;
-        activityList.appendChild(li);
-    });
-
-    // Grafik peminjaman (menggunakan Chart.js)
+    // Grafik peminjaman contoh
     let ctx = document.getElementById("chartPeminjaman").getContext("2d");
     new Chart(ctx, {
         type: "line",
@@ -36,22 +20,67 @@ document.addEventListener("DOMContentLoaded", function() {
             labels: ["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Agu"],
             datasets: [{
                 label: "Jumlah Peminjaman",
-                data: data.peminjamanBulan,
+                data: [10, 20, 15, 30, 25, 40, 35, 50],
                 borderColor: "blue",
                 borderWidth: 2
             }]
         }
     });
+
+    // Tampilkan list aktivitas dari localStorage
+    function tampilkanAktivitas() {
+        let activityList = document.getElementById("recentActivities");
+        activityList.innerHTML = "";
+
+        let aktivitas = JSON.parse(localStorage.getItem("aktivitasTerbaru"));
+
+        aktivitas.forEach((item, index) => {
+            let li = document.createElement("li");
+            li.innerHTML = `
+                ${item}
+                <button onclick="editAktivitas(${index})">Edit</button>
+                <button onclick="hapusAktivitas(${index})">Hapus</button>
+            `;
+            activityList.appendChild(li);
+        });
+    }
+
+    // Tambah aktivitas
+    window.tambahAktivitas = function () {
+        let input = document.getElementById("inputAktivitas");
+        if (input.value.trim() !== "") {
+            let aktivitas = JSON.parse(localStorage.getItem("aktivitasTerbaru"));
+            aktivitas.push(input.value.trim());
+            localStorage.setItem("aktivitasTerbaru", JSON.stringify(aktivitas));
+            tampilkanAktivitas();
+            input.value = "";
+        } else {
+            alert("Masukkan aktivitas terlebih dahulu.");
+        }
+    }
+
+    // Hapus aktivitas
+    window.hapusAktivitas = function (index) {
+        let aktivitas = JSON.parse(localStorage.getItem("aktivitasTerbaru"));
+        aktivitas.splice(index, 1);
+        localStorage.setItem("aktivitasTerbaru", JSON.stringify(aktivitas));
+        tampilkanAktivitas();
+    }
+
+    // Edit aktivitas
+    window.editAktivitas = function (index) {
+        let aktivitas = JSON.parse(localStorage.getItem("aktivitasTerbaru"));
+        let baru = prompt("Edit aktivitas:", aktivitas[index]);
+        if (baru !== null && baru.trim() !== "") {
+            aktivitas[index] = baru.trim();
+            localStorage.setItem("aktivitasTerbaru", JSON.stringify(aktivitas));
+            tampilkanAktivitas();
+        }
+    }
 });
 
-// Fungsi hapus baris dalam tabel
-function hapusPeminjaman(button) {
-    let row = button.parentNode.parentNode;
-    row.parentNode.removeChild(row);
-}
-
-// Fungsi logout (bisa disesuaikan dengan kebutuhan)
+// Fungsi logout
 function logout() {
     alert("Anda telah logout.");
-    window.location.href = "index.html"; // Arahkan ke halaman login
+    window.location.href = "index.html";
 }

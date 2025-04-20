@@ -1,0 +1,135 @@
+body {
+    background-color: #FCEFB4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 40%;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.profile-header img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 3px solid #8B8000;
+    object-fit: cover;
+}
+
+.profile-header input[type="file"] {
+    display: none;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-info input {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #8B8000;
+    border-radius: 5px;
+    background-color: #FFF8DC;
+    font-size: 16px;
+}
+
+.profile-info button {
+    width: 85%;
+    padding: 10px;
+    background: #8B8000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.profile-info button:hover {
+    background: #6B6400;
+}
+
+/* Tombol Hapus Foto */
+#hapus-gambar {
+    margin-top: 10px;
+    padding: 8px;
+    background: #e2deb0;
+    color: #5c5c5c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    display: block;
+    margin: 10px auto;
+}
+
+
+#hapus-gambar:hover {
+    background: #c8b4b4;
+}
+
+/* Pesan Error */
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+/* Tampilan profil setelah tersimpan */
+#profile-display {
+    margin-top: 20px;
+    padding: 15px;
+    background: #F8F8F8;
+    border-radius: 10px;
+    display: none;
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 80%;
+        margin: 30px auto;
+        padding: 15px;
+    }
+
+    .profile-info input, 
+    .profile-info button {
+        width: 100%;
+    }
+
+    .profile-header img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 90%;
+        margin: 20px auto;
+        padding: 10px;
+    }
+
+    .profile-header img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .profile-info input, 
+    .profile-info button {
+        width: 80%;
+        font-size: 14px;
+        padding: 8px;
+    }
+}

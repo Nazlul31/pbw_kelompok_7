@@ -1,0 +1,99 @@
+/* Reset dasar */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FCEFB4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 40%;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Input Group */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 95%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #8B8000;
+    border-radius: 5px;
+    background-color: #FFF8DC;
+    font-size: 16px;
+}
+
+
+/* Tombol */
+button {
+    background-color: #8B8000;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #6B6400;
+}
+
+/* Pesan Error */
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 80%;
+        margin: 30px auto;
+        padding: 15px;
+    }
+
+    .input, 
+    .button {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 90%;
+        margin: 20px auto;
+        padding: 10px;
+    }
+
+    .input, 
+    .button {
+        width: 80%;
+        font-size: 14px;
+        padding: 8px;
+    }
+}
