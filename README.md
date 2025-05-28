@@ -6,7 +6,7 @@ Anggota kelompok:
   3. Muhammad Caesar Aidarus   (2308107010072)
   4. Muhammad Nazlul Ramadhyan (2308107010036)
 
-Proyek ini merupakan aplikasi web perpustakaan online yang dikembangkan untuk memenuhi tugas 3 mata kuliah Pemrograman Berbasis Web. Aplikasi ini memungkinkan pengguna untuk mengelola data buku secara interaktif melalui fitur CRUD (Create, Read, Update, Delete). Semua data disimpan secara lokal di browser menggunakan localStorage, sehingga pengguna dapat menambahkan, mengedit, atau menghapus data tanpa perlu koneksi ke server atau API eksternal.
+Proyek ini merupakan aplikasi web perpustakaan online yang dikembangkan untuk memenuhi tugas 3 mata kuliah Pemrograman Berbasis Web. Aplikasi ini memungkinkan pengguna untuk mengelola data buku secara interaktif melalui fitur CRUD (Create, Read, Update, Delete). Aplikasi ini berfungsi sebagai pengelola workspace, memungkinkan pengguna untuk membuat, melihat, mengedit, menghapus, dan berbagi workspace secara mudah dan interaktif.
 
 Fitur Utama:
 - Halaman utama yang menampilkan daftar koleksi buku
